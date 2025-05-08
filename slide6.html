@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals and Objectives</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0052cc;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #0052cc;
+            position: relative;
+            display: inline-block;
+        }
+
+        .subtitle:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #0052cc;
+        }
+
+        .objective-card {
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #0052cc;
+            background-color: #f8faff;
+        }
+
+        .objective-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .objective-icon {
+            color: white;
+            width: 40px;
+            height: 40px;
+            background-color: #0052cc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .blue-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            width: 100%;
+            background-color: #0052cc;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 40px;
+            z-index: 10;
+        }
+
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(0, 82, 204, 0.05);
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <!-- Decorative elements -->
+        <div class="decorative-circle" style="width: 300px; height: 300px; top: -150px; right: -150px;"></div>
+        <div class="decorative-circle" style="width: 200px; height: 200px; bottom: -100px; left: -100px;"></div>
+
+        <!-- Logo -->
+        <img src="qed42.png"
+            alt="QED42 Logo" class="logo">
+
+        <div class="p-16 relative z-10">
+            <!-- Title -->
+            <h1 class="title mb-10">GOALS & OBJECTIVES</h1>
+
+            <div class="grid grid-cols-2 gap-10">
+                <!-- Project Objectives -->
+                <div>
+                    <h2 class="subtitle mb-8">Project Objectives</h2>
+
+                    <div class="space-y-4">
+                        <div class="objective-card p-4 flex items-start">
+                            <div class="objective-icon mr-4">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Simplify AI Integration</h3>
+                                <p class="text-gray-600 text-sm">Reduce technical complexity for implementing AI
+                                    solutions</p>
+                            </div>
+                        </div>
+
+                        <div class="objective-card p-4 flex items-start">
+                            <div class="objective-icon mr-4">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Enhance Information Access</h3>
+                                <p class="text-gray-600 text-sm">Enable natural language queries for faster information
+                                    discovery</p>
+                            </div>
+                        </div>
+
+                        <div class="objective-card p-4 flex items-start">
+                            <div class="objective-icon mr-4">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Improve User Experience</h3>
+                                <p class="text-gray-600 text-sm">Provide intuitive, conversation-based interactions</p>
+                            </div>
+                        </div>
+
+                        <div class="objective-card p-4 flex items-start">
+                            <div class="objective-icon mr-4">
+                                <i class="fas fa-check-double"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Ensure Information Accuracy</h3>
+                                <p class="text-gray-600 text-sm">Ground AI responses in factual data, reducing
+                                    hallucinations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internship Objectives -->
+                <div>
+                    <h2 class="subtitle mb-8">Internship Objectives</h2>
+
+                    <div class="space-y-4">
+                        <div class="objective-card p-4 flex items-start">
+                            <div class="objective-icon mr-4">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Contribute to Development</h3>
+                                <p class="text-gray-600 text-sm">Enhance core features and resolve critical bugs</p>
+                            </div>
+                        </div>
+
+                        <div class="objective-card p-4 flex items-start">
+                            <div class="objective-icon mr-4">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Implement Tracing</h3>
+                                <p class="text-gray-600 text-sm">Add monitoring capabilities to improve observability
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="objective-card p-4 flex items-start">
+                            <div class="objective-icon mr-4">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Develop AI Proofs of Concept</h3>
+                                <p class="text-gray-600 text-sm">Create demos showcasing platform capabilities</p>
+                            </div>
+                        </div>
+
+                        <div class="objective-card p-4 flex items-start">
+                            <div class="objective-icon mr-4">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Knowledge Sharing & Marketing</h3>
+                                <p class="text-gray-600 text-sm">Participate in sessions and create promotional content
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional objectives -->
+            <div class="mt-8 grid grid-cols-3 gap-4">
+                <div class="objective-card p-3 flex items-center">
+                    <div class="objective-icon mr-3 w-8 h-8">
+                        <i class="fas fa-cogs fa-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 text-sm">Enable Customization</h3>
+                    </div>
+                </div>
+
+                <div class="objective-card p-3 flex items-center">
+                    <div class="objective-icon mr-3 w-8 h-8">
+                        <i class="fas fa-industry fa-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 text-sm">Support Multiple Industries</h3>
+                    </div>
+                </div>
+
+                <div class="objective-card p-3 flex items-center">
+                    <div class="objective-icon mr-3 w-8 h-8">
+                        <i class="fas fa-tachometer-alt fa-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 text-sm">Optimize Efficiency</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote -->
+            <div class="mt-8 text-center text-gray-600 italic">
+                "Building solutions that transform industries and enhance user experiences."
+            </div>
+        </div>
+
+        <!-- Bottom accent line -->
+        <div class="blue-line"></div>
+    </div>
+</body>
+
+</html>

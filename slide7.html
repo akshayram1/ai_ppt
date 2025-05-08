@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0052cc;
+        }
+        .workflow-step {
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #0052cc;
+            background-color: #f8faff;
+        }
+        .workflow-step:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .step-number {
+            background-color: #0052cc;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .blue-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            width: 100%;
+            background-color: #0052cc;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 40px;
+            z-index: 10;
+        }
+        .mermaid {
+            background-color: white;
+        }
+        .mermaid-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 15px;
+        }
+        .layer-badge {
+            font-size: 0.7rem;
+            background-color: #e6f0ff;
+            color: #0052cc;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-right: 0.5rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Logo -->
+        <img src="https://cdn.prod.website-files.com/6470768de8327f36a7ae11a5/652f5d4cfc234592d965de27_logo.webp" alt="QED42 Logo" class="logo">
+        
+        <div class="p-12 relative z-10">
+            <!-- Title -->
+            <h1 class="title mb-6">METHODOLOGY</h1>
+            
+            <div class="grid grid-cols-12 gap-6">
+                <!-- System Architecture -->
+                <div class="col-span-7">
+                    <h2 class="text-xl font-semibold text-blue-800 mb-3">
+                        <i class="fas fa-layer-group mr-2"></i> System Architecture
+                    </h2>
+                    
+                    <div class="mermaid-container">
+                        <div class="mermaid" style="height: 350px;">
+flowchart TB
+    subgraph UI[Presentation Layer]
+        A[Dashboard]
+        B[API Gateway]
+        C[SDKs]
+    end
+    
+    subgraph AL[Application Layer]
+        D[Semantic Search]
+        E[RAG Engine]
+        F[Orchestration]
+    end
+    
+    subgraph SL[Storage Layer]
+        G[Vector Database]
+        H[Document Store]
+        I[Configuration DB]
+    end
+    
+    subgraph PL[Processing Layer]
+        J[Contextual Chunker]
+        K[Embedding Service]
+        L[Metadata Extraction]
+    end
+    
+    subgraph DI[Data Ingestion]
+        M[Document Parser]
+        N[Web Crawler]
+        O[API Connectors]
+    end
+    
+    subgraph MO[Monitoring]
+        P[Analytics]
+        Q[Tracing - Signoz]
+        R[Alerting]
+    end
+    
+    UI --> AL
+    AL --> SL
+    AL --> PL
+    PL --> SL
+    DI --> PL
+    MO -.-> UI
+    MO -.-> AL
+    MO -.-> PL
+    MO -.-> DI
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Workflow steps -->
+                <div class="col-span-5">
+                    <h2 class="text-xl font-semibold text-blue-800 mb-3">
+                        <i class="fas fa-tasks mr-2"></i> AI DXP Workflow
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <div class="workflow-step p-3 flex items-start">
+                            <div class="step-number mr-3 flex-shrink-0">1</div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Assess & Set Objectives</h3>
+                                <p class="text-gray-600 text-xs">Identify challenges and define clear goals with tailored approach</p>
+                            </div>
+                        </div>
+                        
+                        <div class="workflow-step p-3 flex items-start">
+                            <div class="step-number mr-3 flex-shrink-0">2</div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Organize Resources</h3>
+                                <p class="text-gray-600 text-xs">Structure data into actionable formats for integration</p>
+                            </div>
+                        </div>
+                        
+                        <div class="workflow-step p-3 flex items-start">
+                            <div class="step-number mr-3 flex-shrink-0">3</div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Configure Key Components</h3>
+                                <p class="text-gray-600 text-xs">Align models and embeddings with business outcomes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="workflow-step p-3 flex items-start">
+                            <div class="step-number mr-3 flex-shrink-0">4</div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Establish Secure Connections</h3>
+                                <p class="text-gray-600 text-xs">Ensure smooth data flow through API integrations</p>
+                            </div>
+                        </div>
+                        
+                        <div class="workflow-step p-3 flex items-start">
+                            <div class="step-number mr-3 flex-shrink-0">5</div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Refine & Improve</h3>
+                                <p class="text-gray-600 text-xs">Validate, test, and optimize continuously</p>
+                            </div>
+                        </div>
+                        
+                        <div class="workflow-step p-3 flex items-start">
+                            <div class="step-number mr-3 flex-shrink-0">6</div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Scale with Growth</h3>
+                                <p class="text-gray-600 text-xs">Reuse resources, reduce redundancy, maintain consistency</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature workflows -->
+            <div class="mt-6 grid grid-cols-2 gap-6">
+                <!-- Semantic Search -->
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-blue-800 mb-2 flex items-center">
+                        <i class="fas fa-search mr-2"></i> Semantic Search Workflow
+                    </h3>
+                    <ol class="text-sm space-y-1 ml-5 list-decimal text-gray-700">
+                        <li>User submits natural language query</li>
+                        <li>Query converted to vector embedding</li>
+                        <li>Vector database performs similarity search</li>
+                        <li>Results ranked by relevance and metadata</li>
+                        <li>Formatted responses returned to user</li>
+                        <li>Interactions captured for improvement</li>
+                    </ol>
+                </div>
+                
+                <!-- Conversational Assistant -->
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-blue-800 mb-2 flex items-center">
+                        <i class="fas fa-comments mr-2"></i> Conversational Assistant Workflow
+                    </h3>
+                    <ol class="text-sm space-y-1 ml-5 list-decimal text-gray-700">
+                        <li>User initiates or continues conversation</li>
+                        <li>System maintains context and history</li>
+                        <li>Relevant information retrieved from knowledge base</li>
+                        <li>Retrieved info used to generate accurate response</li>
+                        <li>Response filtered through safety guardrails</li>
+                        <li>Final response delivered to user</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom accent line -->
+        <div class="blue-line"></div>
+    </div>
+    
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral',
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+</html>

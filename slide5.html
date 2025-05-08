@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Introduction: AI DXP</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0052cc;
+        }
+
+        .feature-card {
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card-header {
+            background: linear-gradient(90deg, #0052cc, #0077ff);
+            color: white;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #0052cc;
+        }
+
+        .blue-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            width: 100%;
+            background-color: #0052cc;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 40px;
+            z-index: 10;
+        }
+
+        .blob {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.05;
+            background: #0052cc;
+            border-radius: 50%;
+        }
+
+        .benefit-item {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .benefit-item:hover {
+            border-left: 3px solid #0052cc;
+            transform: translateX(5px);
+            background-color: rgba(0, 82, 204, 0.05);
+        }
+
+        .mermaid {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <!-- Background elements -->
+        <div class="blob" style="width: 300px; height: 300px; top: -100px; right: -100px;"></div>
+        <div class="blob" style="width: 200px; height: 200px; bottom: -50px; left: -50px;"></div>
+
+        <!-- Logo -->
+        <img src="qed42.png"
+            alt="QED42 Logo" class="logo">
+
+        <div class="p-16 relative z-10">
+            <!-- Title -->
+            <h1 class="title mb-6">PROJECT INTRODUCTION: AI DXP</h1>
+
+            <!-- Project overview -->
+            <div class="bg-blue-50 p-5 rounded-lg border-l-4 border-blue-500 mb-8">
+                <h2 class="text-xl font-semibold text-blue-800 mb-2">
+                    <i class="fas fa-project-diagram mr-2"></i> Project Overview
+                </h2>
+                <p class="text-gray-700">
+                    AI DXP (Digital Experience Platform), rebranded as Aeldris, transforms organizational workflows by
+                    simplifying AI integration. It makes unstructured information navigable and actionable through
+                    intelligent features.
+                </p>
+            </div>
+
+            <!-- Main features -->
+            <div class="grid grid-cols-2 gap-8 mb-8">
+                <!-- Semantic Search -->
+                <div class="feature-card">
+                    <div class="feature-card-header p-4">
+                        <h2 class="text-xl font-bold flex items-center">
+                            <i class="fas fa-search mr-2"></i> Semantic Search
+                        </h2>
+                    </div>
+                    <div class="p-5 bg-white">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-brain feature-icon"></i>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Understands meaning & context behind queries</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Interprets complex & ambiguous requests</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Finds answers, not just keyword matches</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Maintains context across follow-up questions</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Conversational Assistants -->
+                <div class="feature-card">
+                    <div class="feature-card-header p-4">
+                        <h2 class="text-xl font-bold flex items-center">
+                            <i class="fas fa-comments mr-2"></i> Conversational Assistants
+                        </h2>
+                    </div>
+                    <div class="p-5 bg-white">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-robot feature-icon"></i>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>RAG-powered chatbots with contextual responses</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Grounded in organization's actual data</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Includes guardrails for accuracy & safety</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Maintains conversation context seamlessly</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key benefits -->
+            <div>
+                <h2 class="text-xl font-semibold text-blue-800 mb-3">
+                    <i class="fas fa-star mr-2"></i> Key Benefits
+                </h2>
+
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="benefit-item p-3 rounded">
+                        <div class="flex items-center">
+                            <span class="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-tachometer-alt text-blue-600"></i>
+                            </span>
+                            <span class="font-medium">Streamlined AI Implementation</span>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item p-3 rounded">
+                        <div class="flex items-center">
+                            <span class="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-database text-blue-600"></i>
+                            </span>
+                            <span class="font-medium">Better Information Access</span>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item p-3 rounded">
+                        <div class="flex items-center">
+                            <span class="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-lock text-blue-600"></i>
+                            </span>
+                            <span class="font-medium">Built-in Security Measures</span>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item p-3 rounded">
+                        <div class="flex items-center">
+                            <span class="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-cogs text-blue-600"></i>
+                            </span>
+                            <span class="font-medium">Customizable Solutions</span>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item p-3 rounded">
+                        <div class="flex items-center">
+                            <span class="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-chart-line text-blue-600"></i>
+                            </span>
+                            <span class="font-medium">Improved Decision-Making</span>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item p-3 rounded">
+                        <div class="flex items-center">
+                            <span class="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-money-bill-wave text-blue-600"></i>
+                            </span>
+                            <span class="font-medium">Cost Efficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer quote -->
+            <div class="mt-6 text-center text-gray-600 italic">
+                "Harness Information, Boost Productivity"
+            </div>
+        </div>
+
+        <!-- Bottom accent line -->
+        <div class="blue-line"></div>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral'
+        });
+    </script>
+</body>
+
+</html>

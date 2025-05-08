@@ -1,0 +1,270 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI DXP - Transforming Workflows with AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf7 100%);
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gradient-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+        }
+
+        .blue-accent {
+            background-color: #0052cc;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #0052cc;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .info-box {
+            background-color: rgba(240, 249, 255, 0.8);
+            border-left: 4px solid #0052cc;
+        }
+
+        .logo-container {
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-container img {
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .blue-dot {
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: #0052cc;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .blue-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            width: 100%;
+            background-color: #0052cc;
+        }
+
+        .decorative-element {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(0, 82, 204, 0.05);
+            border-radius: 50%;
+            z-index: 1;
+        }
+    </style>
+    <style>
+        .genspark-badge-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-size: 12px;
+            cursor: pointer;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .genspark-modal {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 10000;
+            justify-content: end;
+        }
+
+        .genspark-modal-content {
+            background-color: white;
+            border-radius: 8px;
+            max-width: 450px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .genspark-modal-content {
+                max-width: 90%;
+            }
+        }
+
+        .genspark-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .genspark-title {
+            margin-bottom: 8px;
+            font-weight: normal;
+            display: inline;
+            font-size: 14px;
+        }
+
+        .genspark-report {
+            color: #909499;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-bottom: 14px;
+            display: inline;
+        }
+
+        .genspark-info {
+            margin: 25px 0;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .genspark-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .genspark-remove-btn {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            color: #333;
+            padding: 4px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            flex: 1;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .genspark-go-btn {
+            background-color: #222;
+            border: none;
+            color: white;
+            padding: 4px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            flex: 1;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+    </style>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+    <div class="slide">
+        <!-- Decorative elements -->
+        <div class="decorative-element" style="top: -150px; right: -150px;"></div>
+        <div class="decorative-element" style="bottom: -150px; left: -150px;"></div>
+
+        <div class="content p-12 flex flex-col h-full">
+            <!-- Logos -->
+            <div class="logo-container px-4 mb-6">
+                <img src="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/v1/7a96c79a-a00a-419c-83e3-4abd6464b721"
+                    alt="QED42 Logo" style="max-height: 70px;">
+                <img src="https://www.vishwakarma-group.com/images/logos/VIT-logo.png" alt="VIT Pune Logo"
+                    style="max-height: 85px;">
+            </div>
+
+            <!-- Main title -->
+            <div class="flex-grow flex flex-col justify-center items-center text-center px-8 my-4">
+                <h1 class="title mb-6">AI DXP</h1>
+                <h2 class="subtitle mb-10">TRANSFORMING WORKFLOWS WITH AI</h2>
+
+                <!-- Student info -->
+                <div class="info-box p-6 rounded-lg w-full max-w-2xl mb-8">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-xl font-semibold mb-1">Akshay Chame</p>
+                            <p class="text-gray-600"><span class="blue-dot"></span>PRN: 12220045</p>
+                            <p class="text-gray-600"><span class="blue-dot"></span>Div: B.Tech-CS-A2 (78)</p>
+                        </div>
+                        <div>
+                            <p class="text-xl font-semibold mb-1">Mentorship</p>
+                            <p class="text-gray-600"><span class="blue-dot"></span>Guide: Dr. Sonali Antad</p>
+                            <p class="text-gray-600"><span class="blue-dot"></span>Mentor: Mr. Alphons Jaimon</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-gray-500">Internship Timeline: 3rd Dec 2024 - 30th May 2025</p>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-auto text-center text-gray-500 text-sm">
+                Mid-Term Examination Presentation • Vishwakarma Institute of Technology
+            </div>
+        </div>
+
+        <!-- Bottom accent line -->
+        <div class="blue-line"></div>
+    </div>
+
+
+</body>
+
+</html>

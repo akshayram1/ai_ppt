@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementation Examples</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0052cc;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0052cc;
+        }
+
+        .implementation-card {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .implementation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        .healthcare-gradient {
+            background: linear-gradient(90deg, #0052cc, #2e7be6);
+        }
+
+        .legal-gradient {
+            background: linear-gradient(90deg, #0052cc, #1e40af);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            color: #0052cc;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .blue-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            width: 100%;
+            background-color: #0052cc;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 40px;
+            z-index: 10;
+        }
+
+        .chat-bubble {
+            position: relative;
+            background: #f0f7ff;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            max-width: 80%;
+        }
+
+        .bubble-right {
+            background: #e6f0ff;
+            margin-left: auto;
+            border-bottom-right-radius: 0;
+        }
+
+        .bubble-left {
+            background: #f8faff;
+            margin-right: auto;
+            border-bottom-left-radius: 0;
+        }
+
+        .search-result {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .search-result:hover {
+            border-color: #0052cc;
+            background-color: #f8faff;
+        }
+
+        .search-result-title {
+            color: #0052cc;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .search-highlight {
+            background-color: rgba(0, 82, 204, 0.1);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        .mock-interface {
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .mock-header {
+            background-color: #f8faff;
+            padding: 10px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .mock-content {
+            padding: 15px;
+            background-color: white;
+        }
+
+        .mock-search {
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <!-- Logo -->
+        <img src="qed42.png"
+            alt="QED42 Logo" class="logo">
+
+        <div class="p-12 relative z-10">
+            <!-- Title -->
+            <h1 class="title mb-6">IMPLEMENTATION EXAMPLES</h1>
+
+            <div class="grid grid-cols-2 gap-8">
+                <!-- Healthcare Sector -->
+                <div>
+                    <div class="implementation-card">
+                        <div class="card-header healthcare-gradient">
+                            <i class="fas fa-heartbeat text-2xl mr-3"></i>
+                            <h2 class="text-xl">Healthcare Sector</h2>
+                        </div>
+
+                        <div class="p-5">
+                            <p class="text-gray-700 mb-4">AI DXP helps healthcare providers access critical patient
+                                information, research, and protocols through conversational AI and semantic search.</p>
+
+                            <!-- Mock Healthcare Interface -->
+                            <div class="mock-interface mb-4">
+                                <div class="mock-header flex justify-between items-center">
+                                    <div class="font-semibold text-gray-700">Medical Knowledge Assistant</div>
+                                    <div class="text-xs text-gray-500">Powered by AI DXP</div>
+                                </div>
+                                <div class="mock-content">
+                                    <div class="chat-bubble bubble-right">
+                                        <p class="text-sm">What are the latest treatment guidelines for Type 2 Diabetes?
+                                        </p>
+                                    </div>
+                                    <div class="chat-bubble bubble-left">
+                                        <p class="text-sm">According to the latest clinical guidelines, first-line
+                                            treatment for Type 2 Diabetes includes lifestyle modifications and metformin
+                                            therapy. For patients with specific risk factors, GLP-1 receptor agonists or
+                                            SGLT2 inhibitors may be recommended.</p>
+                                        <p class="text-xs text-gray-500 mt-1">Source: Hospital Clinical Guidelines
+                                            Database, updated March 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Key Healthcare Benefits -->
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Key Benefits:</h3>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="text-sm">Faster access to clinical information</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check-double"></i>
+                                    </div>
+                                    <div class="text-sm">Reduced medical errors through accurate information</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <div class="text-sm">Improved clinical decision support</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="text-sm">HIPAA-compliant data handling</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legal Sector -->
+                <div>
+                    <div class="implementation-card">
+                        <div class="card-header legal-gradient">
+                            <i class="fas fa-balance-scale text-2xl mr-3"></i>
+                            <h2 class="text-xl">Legal Sector</h2>
+                        </div>
+
+                        <div class="p-5">
+                            <p class="text-gray-700 mb-4">AI DXP helps legal professionals navigate complex case law,
+                                statutes, and legal documents with intelligent search and contextual understanding.</p>
+
+                            <!-- Mock Legal Interface -->
+                            <div class="mock-interface mb-4">
+                                <div class="mock-header flex items-center">
+                                    <i class="fas fa-search text-gray-500 mr-2"></i>
+                                    <div class="mock-search flex-grow">
+                                        <span class="text-sm">Recent precedents for intellectual property in
+                                            software</span>
+                                    </div>
+                                </div>
+                                <div class="mock-content">
+                                    <div class="search-result">
+                                        <div class="search-result-title">Tech Innovations v. DataCorp (2024)</div>
+                                        <p class="text-xs text-gray-600">The court ruled that API structures can be
+                                            protected under <span class="search-highlight">intellectual property</span>
+                                            laws when they demonstrate sufficient creative expression...</p>
+                                    </div>
+                                    <div class="search-result">
+                                        <div class="search-result-title">Open Source Alliance v. CodeGuard (2023)</div>
+                                        <p class="text-xs text-gray-600">This landmark case established new guidelines
+                                            for <span class="search-highlight">software</span> licensing and <span
+                                                class="search-highlight">intellectual property</span> rights in
+                                            collaborative development environments...</p>
+                                    </div>
+                                    <div class="search-result">
+                                        <div class="search-result-title">Patent Regulations Amendment (2024)</div>
+                                        <p class="text-xs text-gray-600">New regulations affecting <span
+                                                class="search-highlight">software</span> patents and <span
+                                                class="search-highlight">intellectual property</span> protection went
+                                            into effect in March 2024...</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Key Legal Benefits -->
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Key Benefits:</h3>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-search-plus"></i>
+                                    </div>
+                                    <div class="text-sm">Enhanced case research capabilities</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-file-contract"></i>
+                                    </div>
+                                    <div class="text-sm">Efficient contract and document analysis</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-gavel"></i>
+                                    </div>
+                                    <div class="text-sm">Precedent identification and citation</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                    <div class="text-sm">Confidentiality-preserving information access</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Implementations -->
+            <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                <h3 class="subtitle mb-2 text-lg">Future Industry Implementations</h3>
+                <div class="grid grid-cols-4 gap-4 text-center">
+                    <div class="p-3 bg-white rounded-lg shadow-sm hover:shadow transition-all">
+                        <i class="fas fa-university text-blue-600 text-xl mb-2"></i>
+                        <p class="font-medium text-gray-700">Finance & Banking</p>
+                    </div>
+                    <div class="p-3 bg-white rounded-lg shadow-sm hover:shadow transition-all">
+                        <i class="fas fa-graduation-cap text-blue-600 text-xl mb-2"></i>
+                        <p class="font-medium text-gray-700">Education</p>
+                    </div>
+                    <div class="p-3 bg-white rounded-lg shadow-sm hover:shadow transition-all">
+                        <i class="fas fa-shopping-cart text-blue-600 text-xl mb-2"></i>
+                        <p class="font-medium text-gray-700">Retail & E-commerce</p>
+                    </div>
+                    <div class="p-3 bg-white rounded-lg shadow-sm hover:shadow transition-all">
+                        <i class="fas fa-hand-holding-heart text-blue-600 text-xl mb-2"></i>
+                        <p class="font-medium text-gray-700">Non-Profit Sector</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom accent line -->
+        <div class="blue-line"></div>
+    </div>
+</body>
+
+</html>

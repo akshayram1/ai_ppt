@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About QED42</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            background-color: white;
+            position: relative;
+            overflow: auto;
+        }
+
+        .title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0052cc;
+        }
+
+        .feature-card {
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #0052cc;
+            background-color: #f8faff;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-icon {
+            color: #0052cc;
+            font-size: 1.5rem;
+        }
+
+        .blue-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            width: 100%;
+            background-color: #0052cc;
+        }
+
+        .bg-blue-gradient {
+            background: linear-gradient(135deg, #e6f0ff 0%, #ffffff 100%);
+        }
+
+        .client-logo {
+            height: 40px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 40px;
+            z-index: 10;
+        }
+
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(0, 82, 204, 0.05);
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <!-- Decorative elements -->
+        <div class="decorative-circle" style="width: 300px; height: 300px; top: -100px; right: -100px;"></div>
+        <div class="decorative-circle" style="width: 200px; height: 200px; bottom: 100px; left: -50px;"></div>
+
+        <!-- Logo -->
+        <img src="qed42.png" alt="QED42 Logo" class="logo">
+
+        <div class="p-12 relative z-10">
+            <!-- Title -->
+            <h1 class="title mb-6">ABOUT QED42</h1>
+
+            <div class="grid grid-cols-12 gap-4">
+                <!-- Company overview -->
+                <div class="col-span-8">
+                    <div class="bg-blue-gradient p-4 rounded-lg shadow-sm mb-4">
+                        <h2 class="text-lg font-semibold text-blue-800 mb-2">
+                            <i class="fas fa-building mr-2"></i> Company Profile
+                        </h2>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            QED42 is a digital experience company blending design excellence with cutting-edge
+                            technology. Established in 2009 and headquartered in Pune, India, it serves 200+ global
+                            clients including Nestlé, Stanford University, BlinkIt, and PwC.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Company facts -->
+                <div class="col-span-4">
+                    <div class="bg-blue-gradient p-4 rounded-lg shadow-sm h-full">
+                        <h2 class="text-lg font-semibold text-blue-800 mb-2">
+                            <i class="fas fa-info-circle mr-2"></i> Quick Facts
+                        </h2>
+                        <ul class="space-y-1">
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+                                    <i class="fas fa-calendar-alt text-blue-600 text-xs"></i>
+                                </span>
+                                <span class="text-gray-700 text-sm">Founded: 2009</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+                                    <i class="fas fa-map-marker-alt text-blue-600 text-xs"></i>
+                                </span>
+                                <span class="text-gray-700 text-sm">HQ: Pune, India</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+                                    <i class="fas fa-users text-blue-600 text-xs"></i>
+                                </span>
+                                <span class="text-gray-700 text-sm">Global Organization</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specializations -->
+            <div class="mt-4">
+                <h2 class="text-lg font-semibold text-blue-800 mb-3">
+                    <i class="fas fa-star mr-2"></i> Specializations
+                </h2>
+
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="feature-card p-3">
+                        <div class="flex items-center mb-1">
+                            <i class="fas fa-laptop-code feature-icon mr-2 text-base"></i>
+                            <h3 class="font-semibold text-base">Product Engineering</h3>
+                        </div>
+                        <p class="text-gray-600 text-xs">Building scalable solutions with modern tech stacks</p>
+                    </div>
+
+                    <div class="feature-card p-3">
+                        <div class="flex items-center mb-1">
+                            <i class="fas fa-robot feature-icon mr-2 text-base"></i>
+                            <h3 class="font-semibold text-base">AI-Driven Solutions</h3>
+                        </div>
+                        <p class="text-gray-600 text-xs">Harnessing AI to create innovative digital experiences</p>
+                    </div>
+
+                    <div class="feature-card p-3">
+                        <div class="flex items-center mb-1">
+                            <i class="fas fa-code feature-icon mr-2 text-base"></i>
+                            <h3 class="font-semibold text-base">Low-Code Development</h3>
+                        </div>
+                        <p class="text-gray-600 text-xs">Building efficient solutions with less coding required</p>
+                    </div>
+
+                    <div class="feature-card p-3">
+                        <div class="flex items-center mb-1">
+                            <i class="fas fa-palette feature-icon mr-2 text-base"></i>
+                            <h3 class="font-semibold text-base">Experience Design</h3>
+                        </div>
+                        <p class="text-gray-600 text-xs">Creating intuitive and engaging user experiences</p>
+                    </div>
+
+                    <div class="feature-card p-3">
+                        <div class="flex items-center mb-1">
+                            <i class="fab fa-react feature-icon mr-2 text-base"></i>
+                            <h3 class="font-semibold text-base">React & Node.js</h3>
+                        </div>
+                        <p class="text-gray-600 text-xs">Modern web development frameworks expertise</p>
+                    </div>
+
+                    <div class="feature-card p-3">
+                    <div class="feature-card p-4">
+                        <div class="flex items-center mb-2">
+                            <i class="fab fa-drupal feature-icon mr-3"></i>
+                            <h3 class="font-semibold text-lg">Drupal</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">CMS platform implementation and customization</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clients section -->
+            <div class="mt-6">
+                <h2 class="text-xl font-semibold text-blue-800 mb-4">
+                    <i class="fas fa-handshake mr-2"></i> Notable Clients
+                </h2>
+
+                <div class="flex justify-around items-center px-10">
+                    <div class="text-center">
+                        <div class="h-12 flex items-center justify-center">
+                            <span class="text-gray-700 font-semibold">Nestlé</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-12 flex items-center justify-center">
+                            <span class="text-gray-700 font-semibold">Stanford University</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-12 flex items-center justify-center">
+                            <span class="text-gray-700 font-semibold">BlinkIt</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-12 flex items-center justify-center">
+                            <span class="text-gray-700 font-semibold">PwC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-8 text-gray-500 text-sm">
+                <p class="italic">"QED42 prioritizes innovation, collaboration, and open-source contributions while
+                    fostering an inclusive work culture."</p>
+            </div>
+        </div>
+
+        <!-- Bottom accent line -->
+        <div class="blue-line"></div>
+    </div>
+</body>
+
+</html>

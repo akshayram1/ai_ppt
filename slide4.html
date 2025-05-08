@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Overview</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0052cc;
+        }
+
+        .blue-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            width: 100%;
+            background-color: #0052cc;
+        }
+
+        .info-card {
+            border-radius: 8px;
+            background-color: #f8faff;
+            border-left: 4px solid #0052cc;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .timeline-point {
+            width: 16px;
+            height: 16px;
+            background-color: #0052cc;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .timeline-line {
+            flex-grow: 1;
+            height: 3px;
+            background-color: #e0e0e0;
+            position: relative;
+        }
+
+        .timeline-progress {
+            height: 100%;
+            background-color: #0052cc;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40%;
+            /* Simulating current progress */
+        }
+
+        .timeline-label {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #555;
+            margin-top: 8px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 40px;
+            z-index: 10;
+        }
+
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(#e6f0ff 15%, transparent 16%);
+            background-size: 15px 15px;
+            opacity: 0.5;
+            z-index: 0;
+            border-radius: 0 0 0 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <!-- Background pattern -->
+        <div class="bg-pattern"></div>
+
+        <!-- Logo -->
+        <img src="qed42.png"
+            alt="QED42 Logo" class="logo">
+
+        <div class="p-16 relative z-10">
+            <!-- Title -->
+            <h1 class="title mb-8">INTERNSHIP OVERVIEW</h1>
+
+            <!-- Timeline -->
+            <div class="mb-12">
+                <h2 class="text-xl font-semibold text-blue-800 mb-4">
+                    <i class="fas fa-calendar-alt mr-2"></i> Timeline: 3rd Dec 2024 - 30th May 2025
+                </h2>
+
+                <div class="flex items-center mt-4">
+                    <div class="timeline-point"></div>
+                    <div class="timeline-line">
+                        <div class="timeline-progress"></div>
+                    </div>
+                    <div class="timeline-point"></div>
+                </div>
+                <div class="flex justify-between">
+                    <div class="timeline-label">Start: Dec 3, 2024</div>
+                    <div class="timeline-label">Current Progress</div>
+                    <div class="timeline-label">End: May 30, 2025</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8">
+                <!-- Role & Team -->
+                <div>
+                    <div class="info-card p-6 mb-6">
+                        <h2 class="text-xl font-semibold text-blue-800 mb-3">
+                            <i class="fas fa-user-tie mr-2"></i> Role
+                        </h2>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 rounded-lg p-4 mr-4">
+                                <i class="fas fa-brain text-blue-600 text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-800">AI/ML Intern</h3>
+                                <p class="text-gray-600 mt-2">Contributing to intelligent and scalable AI/ML solutions
+                                    that drive innovation and efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card p-6">
+                        <h2 class="text-xl font-semibold text-blue-800 mb-3">
+                            <i class="fas fa-users-cog mr-2"></i> Team
+                        </h2>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 rounded-lg p-4 mr-4">
+                                <i class="fas fa-robot text-blue-600 text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-800">AI & ML Innovation Unit</h3>
+                                <p class="text-gray-600 mt-2">Building scalable models, optimizing algorithms, and
+                                    integrating AI into real-world applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mentorship & Responsibilities -->
+                <div>
+                    <div class="info-card p-6 mb-6">
+                        <h2 class="text-xl font-semibold text-blue-800 mb-3">
+                            <i class="fas fa-users mr-2"></i> Mentorship
+                        </h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <span class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+                                    <i class="fas fa-user-cog text-blue-600"></i>
+                                </span>
+                                <div>
+                                    <p class="font-medium">Manager: Anand Toshniwal</p>
+                                    <p class="text-sm text-gray-600">Associate Technical Architect</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+                                    <i class="fas fa-user-graduate text-blue-600"></i>
+                                </span>
+                                <div>
+                                    <p class="font-medium">Mentor: Alphons Jaimon</p>
+                                    <p class="text-sm text-gray-600">AI Engineer - Full Stack</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+                                    <i class="fas fa-chalkboard-teacher text-blue-600"></i>
+                                </span>
+                                <div>
+                                    <p class="font-medium">College Guide: Dr. Sonali Antad</p>
+                                    <p class="text-sm text-gray-600">Department of Computer Engineering</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card p-6">
+                        <h2 class="text-xl font-semibold text-blue-800 mb-3">
+                            <i class="fas fa-tasks mr-2"></i> Key Responsibilities
+                        </h2>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Collaborate on cutting-edge models & algorithms</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Develop AI proofs of concept & implementations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Optimize AI performance & solve technical challenges</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                <span>Document solutions & share knowledge</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-8 text-sm text-gray-500 flex items-center">
+                <i class="fas fa-lightbulb mr-2 text-yellow-500"></i>
+                <p>"Collaborating with the team to build cutting-edge models and create impactful solutions that
+                    transform industries."</p>
+            </div>
+        </div>
+
+        <!-- Bottom accent line -->
+        <div class="blue-line"></div>
+    </div>
+</body>
+
+</html>
