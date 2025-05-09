@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusion</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            background-color: white;
+            position: relative;
+            overflow: auto;
+        }
+
+        .title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0052cc;
+        }
+
+        .blue-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            width: 100%;
+            background-color: #0052cc;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 40px;
+            z-index: 10;
+        }
+
+        .summary-card {
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #0052cc;
+            background-color: #f8faff;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(0, 82, 204, 0.1);
+            color: #0052cc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 16px;
+        }
+
+        .acknowledgment-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .acknowledgment-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #0052cc;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+        }
+
+        .future-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .future-item:hover {
+            background-color: rgba(0, 82, 204, 0.05);
+            transform: translateX(5px);
+        }
+
+        .future-icon {
+            color: #0052cc;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .thank-you-section {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+            border-radius: 10px;
+        }
+
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(0, 82, 204, 0.05);
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <!-- Decorative elements -->
+        <div class="decorative-circle" style="width: 300px; height: 300px; top: -150px; right: -150px;"></div>
+        <div class="decorative-circle" style="width: 250px; height: 250px; bottom: -100px; left: -100px;"></div>
+
+        <!-- Logo -->
+        <img src="qed42.png"
+            alt="QED42 Logo" class="logo">
+
+        <div class="p-12 relative z-10">
+            <!-- Title -->
+            <h1 class="title text-center mb-8">CONCLUSION</h1>
+
+            <div class="grid grid-cols-2 gap-8 mb-6">
+                <!-- Summary Section -->
+                <div>
+                    <h2 class="text-xl font-semibold text-blue-800 mb-4 flex items-center">
+                        <i class="fas fa-check-circle mr-2"></i> Key Takeaways
+                    </h2>
+
+                    <div class="summary-card p-5">
+                        <div class="flex items-start mb-4">
+                            <div class="icon-circle flex-shrink-0">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Practical AI Implementation</h3>
+                                <p class="text-gray-600 text-sm">Bridged the gap between theoretical knowledge and
+                                    real-world application of AI technologies</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start mb-4">
+                            <div class="icon-circle flex-shrink-0">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Technical Growth</h3>
+                                <p class="text-gray-600 text-sm">Enhanced skills in AI/ML, Python, Docker, and modern
+                                    software development practices</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="icon-circle flex-shrink-0">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Professional Development</h3>
+                                <p class="text-gray-600 text-sm">Improved collaboration, communication, and presentation
+                                    skills in a professional environment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Acknowledgments -->
+                <div>
+                    <h2 class="text-xl font-semibold text-blue-800 mb-4 flex items-center">
+                        <i class="fas fa-hands-helping mr-2"></i> Acknowledgments
+                    </h2>
+
+                    <div class="summary-card p-5">
+                        <div class="acknowledgment-item">
+                            <div class="acknowledgment-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">QED42</h3>
+                                <p class="text-gray-600 text-sm">For providing this valuable internship opportunity</p>
+                            </div>
+                        </div>
+
+                        <div class="acknowledgment-item">
+                            <div class="acknowledgment-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Mr. Alphons Jaimon</h3>
+                                <p class="text-gray-600 text-sm">For exceptional mentorship and guidance</p>
+                            </div>
+                        </div>
+
+                        <div class="acknowledgment-item">
+                            <div class="acknowledgment-icon">
+                                <i class="fas fa-user-cog"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Mr. Anand Toshniwal</h3>
+                                <p class="text-gray-600 text-sm">For leadership and technical direction</p>
+                            </div>
+                        </div>
+
+                        <div class="acknowledgment-item">
+                            <div class="acknowledgment-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Dr. Sonali Antad</h3>
+                                <p class="text-gray-600 text-sm">For academic supervision and support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Scope -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold text-blue-800 mb-4 flex items-center">
+                    <i class="fas fa-rocket mr-2"></i> Future Scope
+                </h2>
+
+                <div class="summary-card p-5">
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="future-item">
+                            <i class="fas fa-robot future-icon"></i>
+                            <span class="text-gray-700">Agent-Based Capabilities</span>
+                        </div>
+
+                        <div class="future-item">
+                            <i class="fas fa-server future-icon"></i>
+                            <span class="text-gray-700">On-Premise Implementation</span>
+                        </div>
+
+                        <div class="future-item">
+                            <i class="fas fa-user-friends future-icon"></i>
+                            <span class="text-gray-700">Personalized Content Delivery</span>
+                        </div>
+
+                        <div class="future-item">
+                            <i class="fas fa-chart-pie future-icon"></i>
+                            <span class="text-gray-700">Advanced Analytics</span>
+                        </div>
+
+                        <div class="future-item">
+                            <i class="fas fa-images future-icon"></i>
+                            <span class="text-gray-700">Multi-Modal Capabilities</span>
+                        </div>
+
+                        <div class="future-item">
+                            <i class="fas fa-industry future-icon"></i>
+                            <span class="text-gray-700">Industry-Specific Solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thank You Section -->
+            <div class="thank-you-section">
+                <h2 class="text-3xl font-bold text-blue-700 mb-2">THANK YOU</h2>
+                <p class="text-gray-600">
+                    This internship has been an invaluable learning experience and a significant milestone in my
+                    professional journey.
+                </p>
+                <div class="mt-4 flex justify-center space-x-4">
+                    <div class="flex items-center text-gray-500">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <span>akshay.chame@vit.edu</span>
+                    </div>
+                    <div class="flex items-center text-gray-500">
+                        <i class="fab fa-linkedin mr-2"></i>
+                        <span>linkedin.com/in/akshay-chame</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom accent line -->
+        
+    </div>
+</body>
+
+</html>
